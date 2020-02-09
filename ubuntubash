@@ -1,0 +1,32 @@
+# alias
+alias ls="ls -tral --color"
+# alias python="/x/python/miniconda/bin/python"
+# alias pip="/x/python/bin/pip"
+alias py="python3"
+
+#export pycharm=/home/aniketvjadhav/pycharm-community-2019.1/bin/pycharm.sh
+
+# ls Directory Colors
+LS_COLORS=$LS_COLORS:'di=1;34:'
+export LS_COLORS
+
+# Functions
+
+# command line header
+
+# COLORS
+
+red="\[\e[0;31m\]"
+orange="\[\e[0;91m\]"
+blue="\[\e[0;34m\]"
+lightblue="\[\e[01;34m\]"
+green="\[\e[0;32m\]"
+neon_green="\[\e[01;32m\]"
+endcolor="\[\e[m\]"
+
+# EMOJI
+smile="\xf0\x9f\x98\x83"
+colonP="\xf0\x9f\x98\x9c"
+
+# export PS1="\e[0;31m[\A]\e[m:[\u\e[m@\h:\e[0;34m\w\e[m]\e[0;32m$\e[m-> "
+export PS1='$(if [[ $? == 0 ]]; then printf $smile; else printf $colonP; fi)'" $neon_green[\A]$endcolor:[$lightblue\u$endcolor:$lightblue\w$endcolor]$green $endcolor-> "
